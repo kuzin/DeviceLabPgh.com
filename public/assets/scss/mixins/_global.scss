@@ -1,0 +1,57 @@
+//
+// Compass [SASS] Mixins for ShowClix
+// ----------------------------------
+// @var 'partner' [requires 'product' loading]
+//
+
+// Global Settings
+// ----------------------------------
+// Aka. Override me in your settings!
+
+$partner : 'showclix' !default;
+
+// [IE9 Gradient Support]
+$experimental-support-for-svg : true;
+@mixin linear-gradient($color_one, $color_two) {
+    @include filter-gradient($color_one, $color_two);
+    background: $color_one;
+    @include background(linear-gradient($color_one, $color_two));
+}
+
+// [IE6-9 box-sizing: border-box; support]
+$box-sizing-plugin-location : '/js/box-sizing.htc' !default;
+@mixin box-sizing-ie() {
+   @include box-sizing(border-box);
+   *behavior: url(#{$box-sizing-plugin-location}); // must be relative to document
+}
+
+@mixin fonts($font-family, $file-path, $weight: normal, $style: normal ) {
+  @font-face {
+      font-family: $font-family;
+      src: url("#{$file-path}.eot");
+      src: local("☺"),
+           url("#{$file-path}.woff") format("woff"),
+           url("#{$file-path}.ttf") format("truetype"),
+           url("#{$file-path}.svg##{$font-family}") format("svg");
+      font-weight: $weight;
+      font-style: $style;
+  }
+}
+
+// [Responsive Awareness Plugin]
+@mixin respond-to($breakpoint : null, $retina : false, $maxmin : max) {
+    @if $breakpoint == null {
+        @media only screen { @content }
+    }
+    @elseif $retina == true {
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 2)      and (#{$maxmin}-width: #{$breakpoint}),
+        only screen and (   min--moz-device-pixel-ratio: 2)      and (#{$maxmin}-width: #{$breakpoint}),
+        only screen and (     -o-min-device-pixel-ratio: 2/1)    and (#{$maxmin}-width: #{$breakpoint}),
+        only screen and (        min-device-pixel-ratio: 2)      and (#{$maxmin}-width: #{$breakpoint}),
+        only screen and (                min-resolution: 192dpi) and (#{$maxmin}-width: #{$breakpoint}),
+        only screen and (                min-resolution: 2dppx)  and (#{$maxmin}-width: #{$breakpoint}) { @content }
+    } @else {
+        @media only screen and (#{$maxmin}-width: #{$breakpoint}) { @content }
+    }
+}

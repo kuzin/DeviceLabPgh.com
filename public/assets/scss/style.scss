@@ -68,6 +68,22 @@ section {
 section#devices {
     padding: 15px;
 
+    p.caption {
+        background: #f9f9f9;
+        padding: 15px;
+        font-size: 13px;
+        color: #777;
+        line-height: 20px;
+        code {
+            background: lighten(blue, 47);
+            border: 1px solid lighten(blue, 45);
+            padding: 3px;
+            @include border-radius(3px);
+            font-family: 'consolas';
+            white-space: nowrap;
+        }
+    }
+
     // Responsive table
     @include respond-to($phone) {
         table, thead, tbody, th, td, tr { 
@@ -183,15 +199,16 @@ nav {
             display: block !important;
             cursor: pointer;
             &:after {
+                content: '';
                 top: 0;
                 right: 0;
                 position: absolute;
-                content: '\2261';
-                height: 42px;
-                width: 42px;
-                line-height: 35px;
+                background-image: inline-image('menu.png', png);
+                background-size: 100% auto;
+                display: block;
+                height: 44px;
+                width: 44px;
                 text-align: center;
-                font-size: 50px;
             }
         }
 
@@ -211,6 +228,7 @@ nav {
                 border-bottom: 1px solid rgba(0,0,0,0.3);
                 border-top: 1px solid rgba(255,255,255,0.1);
                 border-left: none;
+                text-align: left;
                 a {
                     border-left: none;
                     color: white;

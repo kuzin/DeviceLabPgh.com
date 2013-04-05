@@ -131,24 +131,45 @@ section h1 {
 section#devices {
   padding: 15px;
 }
+/* line 71, ../scss/style.scss */
+section#devices p.caption {
+  background: #f9f9f9;
+  padding: 15px;
+  font-size: 13px;
+  color: #777;
+  line-height: 20px;
+}
+/* line 77, ../scss/style.scss */
+section#devices p.caption code {
+  background: #f0f0ff;
+  border: 1px solid #e5e5ff;
+  padding: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-family: 'consolas';
+  white-space: nowrap;
+}
 @media only screen and (max-width: 480px) {
-  /* line 73, ../scss/style.scss */
+  /* line 89, ../scss/style.scss */
   section#devices table, section#devices thead, section#devices tbody, section#devices th, section#devices td, section#devices tr {
     display: block;
     font-size: 13px;
   }
-  /* line 78, ../scss/style.scss */
+  /* line 94, ../scss/style.scss */
   section#devices thead tr {
     position: absolute;
     top: -99999px;
     left: -99999px;
   }
-  /* line 84, ../scss/style.scss */
+  /* line 100, ../scss/style.scss */
   section#devices tr {
     border: none;
     padding: 10px !important;
   }
-  /* line 89, ../scss/style.scss */
+  /* line 105, ../scss/style.scss */
   section#devices td {
     color: #555 !important;
     padding: 4px !important;
@@ -156,7 +177,7 @@ section#devices {
     position: relative;
     padding-left: 50% !important;
   }
-  /* line 95, ../scss/style.scss */
+  /* line 111, ../scss/style.scss */
   section#devices td:before {
     position: absolute;
     top: 4px;
@@ -167,35 +188,35 @@ section#devices {
     white-space: nowrap;
     text-transform: uppercase;
   }
-  /* line 105, ../scss/style.scss */
+  /* line 121, ../scss/style.scss */
   section#devices td:nth-of-type(1):before {
     content: "Device";
   }
-  /* line 106, ../scss/style.scss */
+  /* line 122, ../scss/style.scss */
   section#devices td:nth-of-type(2):before {
     content: "Os";
   }
-  /* line 107, ../scss/style.scss */
+  /* line 123, ../scss/style.scss */
   section#devices td:nth-of-type(3):before {
     content: "Screen Size";
   }
-  /* line 108, ../scss/style.scss */
+  /* line 124, ../scss/style.scss */
   section#devices td:nth-of-type(4):before {
     content: "Contributor";
   }
 }
-/* line 112, ../scss/style.scss */
+/* line 128, ../scss/style.scss */
 section#devices table {
   margin-bottom: 15px;
   width: 100%;
   border-collapse: collapse;
 }
-/* line 117, ../scss/style.scss */
+/* line 133, ../scss/style.scss */
 section#devices table thead,
 section#devices table tbody {
   color: #555 !important;
 }
-/* line 119, ../scss/style.scss */
+/* line 135, ../scss/style.scss */
 section#devices table thead th,
 section#devices table tbody th {
   background: #9fb4cb;
@@ -204,17 +225,17 @@ section#devices table tbody th {
   text-transform: uppercase;
   font-size: 12px;
 }
-/* line 126, ../scss/style.scss */
+/* line 142, ../scss/style.scss */
 section#devices table thead tr,
 section#devices table tbody tr {
   background: #f9f9f9;
 }
-/* line 128, ../scss/style.scss */
+/* line 144, ../scss/style.scss */
 section#devices table thead tr:nth-of-type(odd),
 section#devices table tbody tr:nth-of-type(odd) {
   background: white;
 }
-/* line 132, ../scss/style.scss */
+/* line 148, ../scss/style.scss */
 section#devices table thead td, section#devices table thead th,
 section#devices table tbody td,
 section#devices table tbody th {
@@ -222,7 +243,7 @@ section#devices table tbody th {
   text-align: left;
 }
 
-/* line 141, ../scss/style.scss */
+/* line 157, ../scss/style.scss */
 section#feature {
   margin-top: 44px;
   float: left;
@@ -240,21 +261,21 @@ section#feature {
   background: #d94426;
 }
 
-/* line 156, ../scss/style.scss */
+/* line 172, ../scss/style.scss */
 section#about {
   background: #e9e9e9;
   width: 100%;
 }
 
-/* line 161, ../scss/style.scss */
+/* line 177, ../scss/style.scss */
 nav {
   float: right;
 }
-/* line 167, ../scss/style.scss */
+/* line 183, ../scss/style.scss */
 nav label {
   display: none;
 }
-/* line 169, ../scss/style.scss */
+/* line 185, ../scss/style.scss */
 nav input[type=checkbox] {
   visibility: hidden;
   position: absolute;
@@ -262,60 +283,62 @@ nav input[type=checkbox] {
   right: 0;
 }
 @media only screen and (max-width: 560px) {
-  /* line 161, ../scss/style.scss */
+  /* line 177, ../scss/style.scss */
   nav {
     float: left;
     clear: both;
     width: 100%;
   }
-  /* line 182, ../scss/style.scss */
+  /* line 198, ../scss/style.scss */
   nav label {
     display: block !important;
     cursor: pointer;
   }
-  /* line 185, ../scss/style.scss */
+  /* line 201, ../scss/style.scss */
   nav label:after {
+    content: '';
     top: 0;
     right: 0;
     position: absolute;
-    content: '\2261';
-    height: 42px;
-    width: 42px;
-    line-height: 35px;
+    background-image: url('data:png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG11AABzoAAA/N0AAINkAABw6AAA7GgAADA+AAAQkOTsmeoAAAabSURBVHja7FxLbhtHFKwKEkmbkPpcgDcxtZGUAEkOEAExYMpA6AsI0NqA7kBfIvABpJtYFxACeBNRm5fF9Oe9100jMBmMDLwWbEkcTrOn5n2qqgeiiCDG14/vAoIAMAAMAAPAGAFgABgABoAxAsAAMAAMAGMEgAFgABgAxggAA8AAMACMEQAGgC97fL/tBPP5HAAWJG8AzAQAAQy7zcP/BNVvUn4ffpPhAAmIANRH7ZB0rrg5zFzp8/S8LMfzDwKQD4C8v7+7/zBqBJJckFyJyGy4sHo5kHQxIsjHysVp8BLopII+naNmK3OVGyIC/WAA01d5jQNY9T11fQRmBFfz+XwxKoD7+3u3eUUaHBRAakjmC9YRQhKguuj0PhNZIkPU5LnsDYRAOp87gAk1fwY+nwMAB/v7t6Om8NP6+URfUwWxptpwIQ4Q1gshCGGKSOqZ3I1Q55M0QEAAoVSEJa0ig6e/q3U+rdcno0bg0WSSIgQqVYd6VtJXRVS+CJfptUBJBc+cB/U+qhRPB3LU5RcywOkOpJuWAa+ZcHw4HbcL/3x+/pgXmr/nCMsRle9+/j0DIxq1VAKYmolAB1OqXaKaUi2XZf6maUmttiUJpN4EALg4O38cNYWvlsvrH/b2Vn99/Ii/P38GdLqqlGlTHCa1S/TqyHEFT0euLwu1BvcineWmDucQx9MJfvvlV/zx5s31VgDkFPvaf6/mryAiCxH5JN/W+JTWvdX1c9vnA+enc1OzSjqx1qZKK6johOvELnLKHKqN69Qske1qqnTSWJcW3UwA4O7ublwibXNMdVgwdUWdjZX3CfvZUGon4MCloy61JlbSbOtbA5iaSnPQcYl0WnUvmgqpzR0yHWdWB6KAS8DQvU+1AdPR6WqfAdw1l9LkQEO4PT0aBcBeyriukSiNph/1Ahsirbs5TCt2HVfToDZNexFdun/DAsZMYZUy9cKlvpz0aOGHrMdLpBV20QG/UMMa63kOW/talWKzAJ1ayfEBLByPAggOQBxoNVLTkO2FaQlWzIT+DWLD8pwqKR4BTZQ1NW+I+rWI/LODDN4ewBQJCwFuQJl5MS9aDCt5Jz2JpqJSSzyIBbr2CzHvNfW3aGTPFct5DyLyHsCHsZvIAsAKqODpBkCvbI1R4moRa7TUKFbkunRyMXq7Nm1nKuhoFf3ZhEBmJFenp6cvxI3ZqHOlW2lqd4ate+KTVOlpqXIvg8NNpcHbXPRdd5hXr3+UFF6vn0/Kwmm7XLGxKNanM7VTpbJAuSXa/ESn+tX+Veqs4oLmNbSvZ6srr3+0CDyc/GjS0OveQqrF6twarbVzV8pRyVHleVQp35YB6obl/D9tPPj6fTiZjO3GXDzmxWYby5BYbWJqa4tt6rGqfVM7dS00Gr7TiOjjlOgS/LL+i+3cmK0BvFour19fXuJoOrHdV9U4T541MTbRK872F8UXTW3T1KW1/n1Xbwi6CI6mE7z+/RJXfy7HdWPm83m4MVu7MZ67OV2s48PuyFnf0O++fWlnrmdCVNJNS4+k7ykKBPd39yMrEa0oRJV/U3PsT1Y9yEZd3VIeseCIM1PZzqVJtZF1bbUcz0wo3ZTO1nICPn95xaA3eny31DpY34BWL4vr1qzbnF0HaTdjR3aWlhi2UxqgOne9dNMOICW9O7TFb0I1wOobpq0scqduzE4e7ah0JdMYJb34X6wwlA5bIkY6ysVYYFDzi6E/VfbRPBXhywtfghujBT0EByQPGpnGzVKvFwkEIN73801ErH3WcmWdGza9qxvzEuysoYksILgBMPN3WFv3zYLNTppsTP3ePol1m9lY/V7KJbtNn/8y3BiBLAiuAMw8RSiRoRSIrj+6NVgpppqLj9peh5YqAP1TEiXlXSak9Y7vxhzs799m/QmvTcFu5PnO3ISlN2yV3eVviN5j8Z9XCK/auPfH9/a2c2O2BvDpaX2SNbB8AaxuDURTDpXl10aq2f9wpVQ28D/oB4283UXi+XlkN+b4cKrIqeJ73lTIm0dFx1ZfL2tgaS687caFDIvX1dI+1VVSWpzeZlnv6G7MxdnZo6WBLdfTHl/X06M1D8wDQI50W/KtiLl9stNSIlUaTIMTwU/nZ+O6MW+X75IbM91YynRxFxelbLzD/r7tpiak65o+R28p0FEapMh7fXmJt8t3W7kx3NGffloAlcZ8I+MBwNY0hvG3s16AlAsAYwSAAWAAGADGCAADwAAwAIwRAAaAAWAAGCMADAADwAAwRgD4f49/BwDvrZio2f2pJAAAAABJRU5ErkJggg==');
+    background-size: 100% auto;
+    display: block;
+    height: 44px;
+    width: 44px;
     text-align: center;
-    font-size: 50px;
   }
-  /* line 199, ../scss/style.scss */
+  /* line 216, ../scss/style.scss */
   nav input[type=checkbox]:checked ~ ul {
     display: block;
   }
-  /* line 204, ../scss/style.scss */
+  /* line 221, ../scss/style.scss */
   nav ul {
     float: left;
     display: none;
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
   }
-  /* line 209, ../scss/style.scss */
+  /* line 226, ../scss/style.scss */
   nav ul > li {
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-left: none;
+    text-align: left;
   }
-  /* line 214, ../scss/style.scss */
+  /* line 232, ../scss/style.scss */
   nav ul > li a {
     border-left: none;
     color: white;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   }
 }
-/* line 225, ../scss/style.scss */
+/* line 243, ../scss/style.scss */
 nav li {
   border-left: 1px solid #ccc;
   float: left;
 }
-/* line 228, ../scss/style.scss */
+/* line 246, ../scss/style.scss */
 nav li a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -330,18 +353,18 @@ nav li a {
   font-size: 14px;
   border-left: 1px solid #fff;
 }
-/* line 239, ../scss/style.scss */
+/* line 257, ../scss/style.scss */
 nav li a[data-icon]:before {
   content: attr(data-icon);
   font-family: icons;
   margin-right: .5em;
 }
-/* line 245, ../scss/style.scss */
+/* line 263, ../scss/style.scss */
 nav li a:hover {
   background: #f9f9f9;
 }
 @media only screen and (max-width: 768px) {
-  /* line 252, ../scss/style.scss */
+  /* line 270, ../scss/style.scss */
   nav li a[data-icon]:before {
     content: '';
     margin-right: 0;

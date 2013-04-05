@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>[devicelabPGH]</title>
+    <title>[devicelabPGH] Open Device Lab</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
@@ -21,17 +21,35 @@
             <ul>
                 <li><a href="#" data-icon="&#x1f465">About</a></li>
                 <li><a href="#" data-icon="&#x1f4f1">Devices</a></li>
-                <li><a href="#" data-icon="&#x1f4c5">Events</a></li>
+                <!-- <li><a href="#" data-icon="&#x1f4c5">Donations</a></li> -->
                 <li><a href="#" data-icon="&#xe728">Plan a Visit</a></li>
             </ul>
         </nav>
     </header>
 
+    <section id="feature-image"></section>
+
     <section id="feature">
-        <div class="colors"></div>
+        <div class="colors">
+            <h1>A non-profit Open Device Lab in Pittsburgh, deadicated to enabiling local designers & developers to test on a large variety of mobile devices.</h1>
+        </div>
     </section>
 
     <section id="about">
+
+        <ul>
+            <li>
+                <h2>About the project</h2>
+                <p>The web doesn’t live on a desk anymore and we now need to test our work on multiple devices, instead of just few desktop browsers.</p>
+            </li>
+            <li>
+                <h2>Visit the lab</h2>
+                <p>The idea is that anyone can pop round and use the devices. We are located downtown Helsinki, Between Kamppi and Ruoholahti.</p>
+            </li>
+            <li>
+                <h2>Participate in the project</h2>
+                <p>Anyone can participate and help the developer community of Helsinki by lending their old devices to the open device lab</p>
+            </li>
 
     </section>
 
@@ -59,25 +77,38 @@
                     <td>768 x 1025</td>
                     <td>N/A</td>
                 </tr>
+                <tr>
+                    <td>Apple iPhone 5</td>
+                    <td>iOS 6</td>
+                    <td>320 x 568 @2x</td>
+                    <td>N/A</td>
+                </tr>
             </tbody>
         </table>
 
         <p class="caption">
-            Screen size is measured using <a href="#">MQtest.io</a> tool (<code>device-width</code> and <code>device-height</code> in CSS). If two sizes are listed, then that specific device reports different sizes between portrait and landscape mode. Remember that in many cases, these measurements don't match the real dimensions of the device.
+            Screen size is measured using <a href="#">MQtest.io</a> tool [ <code>device-width</code> and <code>device-height</code> in CSS ]. If two sizes are listed, then that specific device reports different sizes between portrait and landscape mode. Remember that in many cases, these measurements don't match the real dimensions of the device.
         </p>
 
     </section>
 
-    <section id="events">
+    <section id="visit">
+        <h1>Visit the Lab</h1>
+        <p>Open space is provided by <a href="http://www.showclix.com">ShowClix</a>, and is located in downtown Pittsburgh, PA.</p>
+        <a href="#">Reserve the Device Lab</a>
     </section>
 
-    <section id="visit">
+    <section id="sponsors">
+
     </section>
 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+    <script src="assets/js/jquery.tablesorter.min.js"></script>
     <script type="text/javascript">
+        $(function(){
+            $('table').tablesorter({sortList: [[0,0]]});
+        });
     </script>
 
 </body></html>

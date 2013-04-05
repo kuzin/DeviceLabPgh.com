@@ -362,55 +362,82 @@ section#sponsors {
 
 /* line 234, ../scss/style.scss */
 section#feature-image {
+  padding: 0;
   margin-top: 44px;
-  background: #e9e9e9;
+  background: #fff;
   height: 280px;
+  background-size: auto 150% !important;
+  background-image: url(../images/devices-2.png) !important;
+  background-repeat: repeat;
+  background-position: center -30px !important;
+  margin-bottom: -1px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
 }
-
-/* line 240, ../scss/style.scss */
-section#feature {
-  float: left;
-  width: 100%;
-  padding: 40px !important;
-  background-repeat: no-repeat;
-  background-position: center -750px !important;
-  background-size: auto auto !important;
+@media only screen and (max-width: 768px) {
+  /* line 234, ../scss/style.scss */
+  section#feature-image {
+    height: 150px;
+  }
+}
+/* line 249, ../scss/style.scss */
+section#feature-image h1 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url(/js/box-sizing.htc);
-  position: relative;
-  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  margin-top: -58px;
+  padding: 20px 40px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  color: white;
+  line-height: 150%;
   background: #d94426;
 }
-/* line 252, ../scss/style.scss */
-section#feature h1 {
-  color: white;
-  text-align: center;
-  margin: 0;
-  line-height: 150%;
-}
-@media only screen and (max-width: 480px) {
-  /* line 252, ../scss/style.scss */
-  section#feature h1 {
-    font-size: 18px;
+@media only screen and (max-width: 768px) {
+  /* line 249, ../scss/style.scss */
+  section#feature-image h1 {
+    display: none;
   }
 }
 
-/* line 263, ../scss/style.scss */
+/* line 267, ../scss/style.scss */
+section#feature {
+  display: none;
+  background: #d94426;
+  color: white;
+}
+/* line 271, ../scss/style.scss */
+section#feature h1 {
+  text-align: center;
+  line-height: 150% !important;
+  font-size: 20px !important;
+  margin: 0;
+}
+@media only screen and (max-width: 768px) {
+  /* line 267, ../scss/style.scss */
+  section#feature {
+    display: block;
+  }
+}
+
+/* line 300, ../scss/style.scss */
 section#about {
   width: 100%;
 }
 
-/* line 267, ../scss/style.scss */
+/* line 304, ../scss/style.scss */
 nav {
   float: right;
 }
-/* line 273, ../scss/style.scss */
+/* line 310, ../scss/style.scss */
 nav label {
   display: none;
 }
-/* line 275, ../scss/style.scss */
+/* line 312, ../scss/style.scss */
 nav input[type=checkbox] {
   visibility: hidden;
   position: absolute;
@@ -418,18 +445,18 @@ nav input[type=checkbox] {
   right: 0;
 }
 @media only screen and (max-width: 560px) {
-  /* line 267, ../scss/style.scss */
+  /* line 304, ../scss/style.scss */
   nav {
     float: left;
     clear: both;
     width: 100%;
   }
-  /* line 288, ../scss/style.scss */
+  /* line 325, ../scss/style.scss */
   nav label {
     display: block !important;
     cursor: pointer;
   }
-  /* line 291, ../scss/style.scss */
+  /* line 328, ../scss/style.scss */
   nav label:after {
     content: '';
     top: 0;
@@ -442,18 +469,18 @@ nav input[type=checkbox] {
     width: 44px;
     text-align: center;
   }
-  /* line 306, ../scss/style.scss */
+  /* line 343, ../scss/style.scss */
   nav input[type=checkbox]:checked ~ ul {
     display: block;
   }
-  /* line 311, ../scss/style.scss */
+  /* line 348, ../scss/style.scss */
   nav ul {
     float: left;
     display: none;
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
   }
-  /* line 316, ../scss/style.scss */
+  /* line 353, ../scss/style.scss */
   nav ul > li {
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -461,19 +488,19 @@ nav input[type=checkbox] {
     border-left: none;
     text-align: left;
   }
-  /* line 322, ../scss/style.scss */
+  /* line 359, ../scss/style.scss */
   nav ul > li a {
     border-left: none;
     color: white;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   }
 }
-/* line 333, ../scss/style.scss */
+/* line 370, ../scss/style.scss */
 nav li {
   border-left: 1px solid #ccc;
   float: left;
 }
-/* line 336, ../scss/style.scss */
+/* line 373, ../scss/style.scss */
 nav li a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -488,18 +515,18 @@ nav li a {
   font-size: 14px;
   border-left: 1px solid #fff;
 }
-/* line 347, ../scss/style.scss */
+/* line 384, ../scss/style.scss */
 nav li a[data-icon]:before {
   content: attr(data-icon);
   font-family: icons;
   margin-right: .5em;
 }
-/* line 353, ../scss/style.scss */
+/* line 390, ../scss/style.scss */
 nav li a:hover {
   background: #f9f9f9;
 }
 @media only screen and (max-width: 768px) {
-  /* line 360, ../scss/style.scss */
+  /* line 397, ../scss/style.scss */
   nav li a[data-icon]:before {
     content: '';
     margin-right: 0;

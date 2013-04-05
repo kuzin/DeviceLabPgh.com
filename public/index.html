@@ -27,12 +27,12 @@
         </nav>
     </header>
 
-    <section id="feature-image"></section>
+    <section id="feature-image">
+        <h1>We are a non-profit Open Device Lab in Pittsburgh, PA. Our team is dedicated to<br/> helping local designers & developers test on a large variety of mobile devices.</h1>
+    </section>
 
     <section id="feature">
-        <div class="colors">
-            <h1>A non-profit Open Device Lab in Pittsburgh, deadicated to enabiling local designers & developers to test on a large variety of mobile devices.</h1>
-        </div>
+        <h1>We are a non-profit Open Device Lab in Pittsburgh, PA. Our team is dedicated to helping local designers & developers test on a large variety of mobile devices.</h1>
     </section>
 
     <section id="about">
@@ -105,9 +105,11 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="assets/js/jquery.tablesorter.min.js"></script>
+    <script src="assets/js/jquery.fittext.js"></script>
     <script type="text/javascript">
         $(function(){
             $('table').tablesorter({sortList: [[0,0]]});
+            $('#feature-image h1').fitText(3.6, { maxFontSize: '32px' });
         });
     </script>
 

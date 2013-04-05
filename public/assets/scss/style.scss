@@ -232,33 +232,70 @@ section#sponsors {
 }
 
 section#feature-image {
+    padding: 0;
     margin-top: 44px;
-    background: #e9e9e9;
+    background: #fff;
     height: 280px;
-}
-
-section#feature {
-    float: left;
-    width: 100%;
-    padding: 40px !important;
-    background-repeat: no-repeat;
-    background-position: center -750px  !important;
-    background-size: auto auto !important;
-    //background-image: url(../images/devices.png) !important;
-    @include box-sizing-ie;
+    background-size: auto 150% !important;
+    background-image: url(../images/devices-2.png) !important;
+    background-repeat: repeat;
+    background-position: center -30px !important;
+    margin-bottom: -1px;
+    border-bottom: 1px solid #ccc;
     position: relative;
-    overflow: hidden;
-    background: $red;
+    @include respond-to($tablet) {
+        height: 150px;
+    }
     h1 {
-        color: white;
+        @include box-sizing-ie();
+        position: absolute;
+        top: 50%;
+        margin-top:  -(116px/2);
+        padding: 20px 40px;
+        width: 100%;
         text-align: center;
-        margin: 0;
+        display: block;
+        color: white;
         line-height: 150%;
-        @include respond-to($phone) {
-            font-size: 18px;
+        background: $red;
+        @include respond-to($tablet) {
+            display: none;
         }
     }
 }
+
+section#feature {
+    display: none;
+    background: $red;
+    color: white;
+    h1 {
+        text-align: center;
+        line-height: 150% !important;
+        font-size: 20px !important;
+        margin: 0;
+    }
+    @include respond-to($tablet) {
+        display: block;
+    }
+}
+
+// section#feature {
+//     position: absolute;
+//     top: 100px;
+//     @include respond-to($phone) {
+//         position: relative;
+//         top: 0;
+//     }
+//     z-index: 10;
+//     float: left;
+//     width: 100%;
+//     padding: 40px !important;
+//     @include box-sizing-ie;
+//     overflow: hidden;
+//     background: $red;
+//     border-top: none !important;
+    
+// }
 
 section#about {
     width: 100%;

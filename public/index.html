@@ -28,33 +28,20 @@
     </header>
 
     <section id="feature-image">
-        <h1>We are a non-profit Open Device Lab in Pittsburgh, PA. Our team is dedicated to<br/> helping local designers & developers test on a large variety of mobile devices.</h1>
-    </section>
-
-    <section id="feature">
-        <h1>We are a non-profit Open Device Lab in Pittsburgh, PA. Our team is dedicated to helping local designers & developers test on a large variety of mobile devices.</h1>
-    </section>
-
-    <section id="about">
-
-        <ul>
-            <li>
-                <h2>About the project</h2>
-                <p>The web doesn’t live on a desk anymore and we now need to test our work on multiple devices, instead of just few desktop browsers.</p>
-            </li>
-            <li>
-                <h2>Visit the lab</h2>
-                <p>The idea is that anyone can pop round and use the devices. We are located downtown Helsinki, Between Kamppi and Ruoholahti.</p>
-            </li>
-            <li>
-                <h2>Participate in the project</h2>
-                <p>Anyone can participate and help the developer community of Helsinki by lending their old devices to the open device lab</p>
-            </li>
-
+        <div class="feature-image-text">
+            <h1>
+                Headline...
+            </h1>
+            <p>
+                We are a non-profit Open Device Lab in Pittsburgh, PA. Our team is dedicated to helping local designers & developers test on a large variety of mobile devices.
+            </p>
+            <a href="#">Schedule a Visit</a>
+        </div>
     </section>
 
     <section id="devices">
         <h1>Device Library</h1>
+        <p>Desription about devices...Blah blah blah...</p>
         <table>
             <thead>
                 <tr>
@@ -87,16 +74,36 @@
         </table>
 
         <p class="caption">
-            Screen size is measured using <a href="#">MQtest.io</a> tool [ <code>device-width</code> and <code>device-height</code> in CSS ]. If two sizes are listed, then that specific device reports different sizes between portrait and landscape mode. Remember that in many cases, these measurements don't match the real dimensions of the device.
+            Screen size is measured using <a href="#">MQtest.io</a>, <code>document.write(screen.width)</code> and <code>document.write(screen.height)</code> in default browsers. If two or more sizes are listed, then that specific device reports different sizes between portrait and landscape mode. In many cases, these measurements don't match the real dimensions of the device. All capable devices will be installed with a recent version of <a href="http://html.adobe.com/edge/inspect/">Adobe Edge Inspect</a>. For more information about custom builds and devices, please contast us <a href="http://twitter.com/devicelabpgh">@devicelabpgh</a>
         </p>
 
     </section>
 
     <section id="visit">
-        <h1>Visit the Lab</h1>
-        <p>Open space is provided by <a href="http://www.showclix.com">ShowClix</a>, and is located in downtown Pittsburgh, PA.</p>
-        <a href="#">Reserve the Device Lab</a>
+        <ul>
+            <li>
+                <h1>Who are we</h1>
+                <p>DeviceLabPGH is located open space provided by <a href="http://www.showclix.com">ShowClix</a>. Our mission is to help the developer community in and around Pittsburgh. This lab is set up, and based upon the principles set by ClearLeft and others who have already opened these labs.</p>
+            </li>
+            <li>
+                <h1>Visit the Lab</h1>
+                <p>Open space is provided by <a href="http://www.showclix.com">ShowClix</a>, and is located in downtown Pittsburgh, PA.</p>
+                <a href="#">Reserve the Device Lab</a>
+            </li>
+            <li>
+                <img src="http://maps.google.com/maps/api/staticmap?center=40.442483,-79.996695&zoom=16&markers=size:mid|color:blue|40.150593,-79.543476|40.442483,-79.996695&size=450x250&sensor=true" />
+            </li>
+
+        <div class="help-out">
+
+            <h1>Help the community</h1>
+
+
+
+        </div>
+
     </section>
+
 
     <section id="sponsors">
 
@@ -108,8 +115,7 @@
     <script src="assets/js/jquery.fittext.js"></script>
     <script type="text/javascript">
         $(function(){
-            $('table').tablesorter({sortList: [[0,0]]});
-            $('#feature-image h1').fitText(3.6, { maxFontSize: '32px' });
+            $('table').tablesorter({sortList: [[0,0]]});        
         });
     </script>
 

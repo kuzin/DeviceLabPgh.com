@@ -62,8 +62,8 @@ section {
     width: 100%;
     @include box-sizing-ie;
     &:nth-of-type(2n+2) {
-        border-top: 1px solid lighten($blue, 23);
-        border-bottom: 1px solid lighten($blue, 23);
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
         background: lighten($blue, 28);
     }
     h1 {
@@ -71,32 +71,13 @@ section {
         font-size: 25px;
         margin-bottom: 15px;
     }
-}
-
-section#about {
-    padding: 20px !important;
-    ul {
-        li {
-            float: left;
-            @include respond-to($tablet) {
-                width: 100% !important;
-                padding: 20px !important;
-            }
-            width: (100%/3);
-            padding: 40px 20px;
-            @include box-sizing-ie;
-            h2 {
-                margin-bottom: 15px;
-                font-size: 18px;
-                font-family: 'Vollkorn';
-            }
-            p {
-                font-size: 15px;
-                line-height: 20px;
-            }
-        }
+    p {
+        color: #777;
+        margin-bottom: 20px;
+        line-height: 140%;
     }
 }
+
 
 section#devices {
 
@@ -119,6 +100,8 @@ section#devices {
 
     // Responsive table
     @include respond-to($phone) {
+        table {
+        }
         table, thead, tbody, th, td, tr { 
             display: block; 
             font-size: 13px;
@@ -159,7 +142,8 @@ section#devices {
     }
     // Table Style
     table {
-        margin-bottom: 15px;
+        border: 1px solid lighten($blue, 18);
+        margin-bottom: 20px;
         width: 100%;
         border-collapse: collapse;
         thead,
@@ -197,25 +181,11 @@ section#devices {
                         margin-left: 5px;
                     }
                 }
-                &:nth-of-type(1) {
-                    @include border-radius(3px 0 0 0);
-                }
-                &:nth-of-type(4) {
-                    @include border-radius(0 3px 0 0);
-                }
             }
             tr {
                 background: lighten($blue, 23);
                 &:nth-of-type(odd) {
                     background: white;
-                }
-                &:last-of-type {
-                    td:nth-of-type(1) {
-                        @include border-radius(0 0 0 3px);
-                    }
-                    td:last-of-type {
-                        @include border-radius(0 0 3px 0);
-                    }
                 }
             }
             td, th {
@@ -231,74 +201,93 @@ section#sponsors {
     background: #e5e5e5;
 }
 
+
+section#visit {
+    ul {
+        float: left;
+        @include clearfix;
+        li {
+            @include respond-to($phone) {
+                width: 100% !important;
+            }
+            margin-bottom: 20px;
+            width: (60%/2);
+            float: left;
+            @include box-sizing-ie;
+            &:last-of-type {
+                width: 40%;
+                padding: 0 0 20px 20px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .help-out {
+        clear: both;
+        background: lighten($blue, 23);
+        padding: 20px;
+        margin: 20px 0 0 0;
+    }
+}
+
 section#feature-image {
     padding: 0;
     margin-top: 44px;
     background: #fff;
-    height: 280px;
     background-size: auto 150% !important;
     background-image: url(../images/devices-2.png) !important;
     background-repeat: repeat;
     background-position: center -30px !important;
     margin-bottom: -1px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid lighten($blue, 23);
     position: relative;
-    @include respond-to($tablet) {
-        height: 150px;
+    padding: 50px 0;
+    @include respond-to($phone) {
+        padding: 0;
     }
-    h1 {
-        @include box-sizing-ie();
-        position: absolute;
-        top: 50%;
-        margin-top:  -(116px/2);
-        padding: 20px 40px;
-        width: 100%;
-        text-align: center;
-        display: block;
-        color: white;
-        line-height: 150%;
+    div.feature-image-text {
+        @include clearfix;
         background: $red;
-        @include respond-to($tablet) {
-            display: none;
+        text-align: left;
+        padding: 30px 40px !important;
+        a {
+            text-transform: uppercase;
+            display: block;
+            color: white;
+            background: darken($red, 10);
+            &:hover {
+                background: darken($red, 20);
+            }
+            padding: 20px;
+            float: left;
+            @include border-radius(3px);
+            @include box-sizing-ie;
+            @include respond-to($tablet) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        p {
+            font-family: 'Vollkorn';
+            color: white;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        h1 {
+            clear: both;
+            font-size: 30px;
+            line-height: 130%;
+            margin: 0 !important;
+            padding: 0;
+            color: white;
+            @include respond-to($tablet) {
+                padding-right: 0px;
+                width: 100%;
+            }
         }
     }
-}
-
-section#feature {
-    display: none;
-    background: $red;
-    color: white;
-    h1 {
-        text-align: center;
-        line-height: 150% !important;
-        font-size: 20px !important;
-        margin: 0;
-    }
-    @include respond-to($tablet) {
-        display: block;
-    }
-}
-
-// section#feature {
-//     position: absolute;
-//     top: 100px;
-//     @include respond-to($phone) {
-//         position: relative;
-//         top: 0;
-//     }
-//     z-index: 10;
-//     float: left;
-//     width: 100%;
-//     padding: 40px !important;
-//     @include box-sizing-ie;
-//     overflow: hidden;
-//     background: $red;
-//     border-top: none !important;
     
-// }
-
-section#about {
-    width: 100%;
 }
 
 nav {
@@ -316,7 +305,7 @@ nav {
         right: 0;
     }
 
-    @include respond-to($menu) {
+    @include respond-to($phone) {
 
         float: left;
         clear: both;
@@ -380,18 +369,15 @@ nav {
             line-height: 44px;
             font-size: 14px;
             border-left: 1px solid #fff;
+            text-transform: uppercase;
             &[data-icon] {
                 &:before {
-                    content: attr(data-icon);
-                    font-family: icons;
-                    margin-right: .5em;
+                    // content: attr(data-icon);
+                    // font-family: icons;
+                    // margin-right: .5em;
                 }
             }
-            &:hover {
-                background: #f9f9f9;
-                //color: white;
-                //@include text-shadow(0 1px 0 $red);
-            }
+            &:hover { background: #f9f9f9; }
             @include respond-to($tablet) {
                 &[data-icon] {
                     &:before {
@@ -401,14 +387,6 @@ nav {
                 }
             }
         }
-        // &.visit {
-        //     a {
-        //         background: $red;
-        //         color: white;
-        //         @include text-shadow(0 1px 0 darken($red, 15));
-        //         border-left: 1px solid transparent;
-        //     }
-        // }
     }
 }
 
